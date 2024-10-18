@@ -1,3 +1,4 @@
+import { ThemeToggle } from '@/components';
 import { ThemeProvider } from '@/components/providers';
 import type { Metadata } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
@@ -33,6 +34,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
+          <nav className='flex items-center p-4 w-full'>
+            <ThemeToggle />
+          </nav>
           {children}
         </ThemeProvider>
       </body>
