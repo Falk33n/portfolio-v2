@@ -1,3 +1,4 @@
+import { ThemeProvider } from '@/components/providers';
 import type { Metadata } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
 import React from 'react';
@@ -21,8 +22,20 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang='en'>
-      <body className={`${roboto.className} antialiased`}>{children}</body>
+    <html
+      lang='en'
+      suppressHydrationWarning
+    >
+      <body className={`${roboto.className} antialiased w-full min-h-screen`}>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
