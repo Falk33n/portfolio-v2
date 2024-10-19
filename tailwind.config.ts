@@ -57,6 +57,20 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      keyframes: {
+        'spin-out': {
+          from: { transform: 'rotate(0deg)', opacity: '100%' },
+          to: { transform: 'rotate(360deg)', opacity: '0%' },
+        },
+        'spin-in': {
+          from: { transform: 'rotate(360deg)', opacity: '0%' },
+          to: { transform: 'rotate(0deg)', opacity: '100%' },
+        },
+      },
+      animation: {
+        'spin-out': 'spin-out 1s linear forwards',
+        'spin-in': 'spin-in 1s linear forwards',
+      },
     },
   },
   plugins: [tailwindCssAnimate],

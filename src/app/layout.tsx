@@ -1,4 +1,4 @@
-import { ThemeToggle } from '@/components';
+import { NavBar } from '@/components/nav-bar';
 import { ThemeProvider } from '@/components/providers';
 import type { Metadata } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
@@ -6,7 +6,7 @@ import React from 'react';
 import './globals.scss';
 
 const roboto = Roboto_Condensed({
-  weight: ['400', '500', '700', '800'],
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
   style: ['normal', 'italic'],
@@ -34,9 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <nav className='flex items-center p-4 w-full'>
-            <ThemeToggle />
-          </nav>
+          <NavBar />
           {children}
         </ThemeProvider>
       </body>
