@@ -48,35 +48,35 @@ export const ThemeToggle = () => {
           <TooltipTrigger asChild>
             <DropdownMenuTrigger asChild>
               <Button
-                variant='outline'
+                variant='ghost'
                 size='icon'
                 aria-haspopup='menu'
                 aria-expanded={states.isMenuOpen}
               >
                 <Sun
                   aria-hidden
-                  className='w-[1.2rem] h-[1.2rem] transition-all rotate-0 scale-100 dark:-rotate-90 dark:scale-0'
+                  className='transition-all rotate-0 scale-110 dark:-rotate-90 dark:scale-0'
                 />
                 <Moon
                   aria-hidden
-                  className='absolute w-[1.2rem] h-[1.2rem] transition-all rotate-90 scale-0 dark:rotate-0 dark:scale-100'
+                  className='absolute transition-all rotate-90 scale-0 dark:rotate-0 dark:scale-110'
                 />
-                <span className='sr-only'>Toggle theme</span>
+                <span className='sr-only'>Toggle the theme</span>
               </Button>
             </DropdownMenuTrigger>
           </TooltipTrigger>
           <TooltipContent
-            side='right'
             sideOffset={8}
             aria-hidden
           >
-            Toggle theme
+            Toggle the theme
           </TooltipContent>
         </Tooltip>
         <DropdownMenuContent align='end'>
-          <DropdownMenuLabel>Toggle theme</DropdownMenuLabel>
+          <DropdownMenuLabel>Toggle the theme</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuCheckboxItem
+            className='cursor-pointer'
             disabled={states.isLight}
             checked={states.isLight}
             onCheckedChange={() => setTheme('light')}
@@ -84,6 +84,7 @@ export const ThemeToggle = () => {
             Light
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
+            className='cursor-pointer'
             disabled={states.isDark}
             checked={states.isDark}
             onCheckedChange={() => setTheme('dark')}
@@ -91,6 +92,7 @@ export const ThemeToggle = () => {
             Dark
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
+            className='cursor-pointer'
             disabled={states.isSystem}
             checked={states.isSystem}
             onCheckedChange={() => setTheme('system')}
