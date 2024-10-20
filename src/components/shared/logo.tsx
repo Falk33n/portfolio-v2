@@ -40,6 +40,7 @@ export const Logo = ({ placement }: SharedPlacement) => {
                   aria-label='Go to the homepage.'
                 >
                   <span
+                    aria-hidden
                     className={cn(
                       'mt-2',
                       placement === 'navbar' ? 'text-4xl' : 'text-3xl'
@@ -48,6 +49,7 @@ export const Logo = ({ placement }: SharedPlacement) => {
                     F
                   </span>
                   <span
+                    aria-hidden
                     className={cn(
                       'mt-1',
                       placement === 'navbar' ? 'text-2xl' : 'text-xl'
