@@ -3,6 +3,7 @@
 import { NavBarLinks } from '@/components/nav-bar';
 import {
   Button,
+  Skeleton,
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -17,7 +18,7 @@ export const NavBarMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { width } = useWindowSize();
 
-  if (!width) return null;
+  if (!width) return <Skeleton className='md:w-96 size-10' />;
   return (
     <>
       {width < 768 && (
