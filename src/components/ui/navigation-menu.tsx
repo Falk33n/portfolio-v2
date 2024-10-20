@@ -28,6 +28,7 @@ const NavigationMenuList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.List
     ref={ref}
+    role='menu'
     className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1',
       className

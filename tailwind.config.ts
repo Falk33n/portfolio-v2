@@ -66,10 +66,15 @@ const config: Config = {
           from: { transform: 'rotate(360deg)', opacity: '0%' },
           to: { transform: 'rotate(0deg)', opacity: '100%' },
         },
+        'slide-in': {
+          from: { transform: 'translateX(200px)' },
+          to: { transform: 'translateX(0)' },
+        },
       },
       animation: {
         'spin-out': 'spin-out 1s linear forwards',
         'spin-in': 'spin-in 1s linear forwards',
+        'slide-in': 'slide-in 0.2s linear forwards',
       },
     },
   },
