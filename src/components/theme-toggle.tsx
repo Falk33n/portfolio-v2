@@ -52,14 +52,21 @@ export const ThemeToggle = () => {
                 size='icon'
                 aria-haspopup='menu'
                 aria-expanded={states.isMenuOpen}
+                className='flex-row-reverse px-4 py-2 md:p-0 w-fit md:w-10 text-base'
               >
+                <span
+                  aria-hidden
+                  className='md:hidden'
+                >
+                  Theme
+                </span>
                 <Sun
                   aria-hidden
-                  className='transition-all rotate-0 scale-110 dark:-rotate-90 dark:scale-0'
+                  className='block dark:hidden'
                 />
                 <Moon
                   aria-hidden
-                  className='absolute transition-all rotate-90 scale-0 dark:rotate-0 dark:scale-110'
+                  className='dark:block hidden'
                 />
                 <span className='sr-only'>Toggle the theme</span>
               </Button>
@@ -72,7 +79,10 @@ export const ThemeToggle = () => {
             Toggle the theme
           </TooltipContent>
         </Tooltip>
-        <DropdownMenuContent align='end'>
+        <DropdownMenuContent
+          align='end'
+          sideOffset={8}
+        >
           <DropdownMenuLabel>Toggle the theme</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuCheckboxItem
