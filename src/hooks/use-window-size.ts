@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { useEffect, useState } from 'react';
 
 type WindowSizeProps = {
   width?: number;
@@ -8,12 +8,12 @@ type WindowSizeProps = {
 };
 
 export const useWindowSize = () => {
-  const [windowSize, setWindowSize] = React.useState<WindowSizeProps>({
+  const [windowSize, setWindowSize] = useState<WindowSizeProps>({
     width: undefined,
     height: undefined,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (typeof window === undefined) return;
 
     const handleResize = () => {
