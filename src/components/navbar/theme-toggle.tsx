@@ -15,7 +15,7 @@ import {
 } from '@/components/ui';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import React from 'react';
+import { useEffect, useState } from 'react';
 
 const themeStates = {
   isMenuOpen: false,
@@ -26,9 +26,9 @@ const themeStates = {
 
 export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
-  const [states, setStates] = React.useState(themeStates);
+  const [states, setStates] = useState(themeStates);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setStates({
       isMenuOpen: states.isMenuOpen,
       isLight: theme === 'light',

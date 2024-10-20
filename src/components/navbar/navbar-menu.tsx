@@ -16,10 +16,10 @@ import {
 import { useWindowSize } from '@/hooks';
 import { cn } from '@/lib';
 import { Menu, X } from 'lucide-react';
-import React from 'react';
+import { useState } from 'react';
 
-export const NavbarMenu = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+export const NavBarMenu = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { width } = useWindowSize();
 
   if (!width) return <Skeleton className='md:w-96 size-10' />;
