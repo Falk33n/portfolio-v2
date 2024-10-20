@@ -15,7 +15,7 @@ const roboto = Roboto_Condensed({
 export const metadata: Metadata = {
   title: "Tim Falk's Portfolio | Full-Stack Developer",
   description:
-    'Tim Falk is a full-stack developer showcasing expertise in both front-end and back-end development with technologies like React, TypeScript, Node.js, .NET and Prisma.',
+    'Tim Falk is a full-stack developer showcasing expertise in both front-end and back-end development with technologies like React, TypeScript, Node.js, tRPC, .NET and Prisma.',
   keywords:
     'Tim Falk, full-stack developer, web developer, React, Node.js, TypeScript, .NET, C#, Next.js, Tailwind CSS, Prisma, tRPC',
   openGraph: {
