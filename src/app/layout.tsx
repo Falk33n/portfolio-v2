@@ -1,6 +1,6 @@
 import { NavBar } from '@/components/nav-bar';
 import { ThemeProvider } from '@/components/providers';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
 import React from 'react';
 import './globals.scss';
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
       "Explore Tim Falk's full-stack development projects, highlighting expertise in front-end (React, Next.js) and back-end (Node.js, Prisma, tRPC, .NET).",
     images: [
       {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
+        url: '/images/authors-body.png',
+        width: 356,
+        height: 701,
         alt: "Tim Falk's Full-Stack Developer Portfolio",
       },
     ],
@@ -40,12 +40,14 @@ export const metadata: Metadata = {
     title: "Tim Falk's Full-Stack Developer Portfolio",
     description:
       "Check out Tim Falk's portfolio showcasing full-stack web development expertise in React, Node.js, TypeScript, .NET, Prisma and more.",
-    images: '/images/twitter-card.jpg',
+    images: '/images/authors-body.png',
   },
   robots: 'index, follow',
-  icons: {
-    icon: '/favicon.ico',
-  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 type RootLayoutProps = {
@@ -59,13 +61,37 @@ export default function RootLayout({ children }: RootLayoutProps) {
       suppressHydrationWarning
     >
       <head>
-        <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1'
-        />
         <link
           rel='canonical'
           href='https://timfalk.dev'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          href='/favicon/favicon-48x48.png'
+          sizes='48x48'
+        />
+        <link
+          rel='icon'
+          type='image/svg+xml'
+          href='/favicon/favicon.svg'
+        />
+        <link
+          rel='shortcut icon'
+          href='/favicon/favicon.ico'
+        />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/favicon/apple-touch-icon.png'
+        />
+        <meta
+          name='apple-mobile-web-app-title'
+          content='falk33n'
+        />
+        <link
+          rel='manifest'
+          href='/favicon/site.webmanifest'
         />
       </head>
       <body className={`${roboto.className} antialiased w-full`}>
