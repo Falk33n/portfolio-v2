@@ -18,7 +18,7 @@ import { cn } from '@/lib';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-export const NavBarMenu = () => {
+export const NavbarMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { width } = useWindowSize();
 
