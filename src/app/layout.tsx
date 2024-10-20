@@ -2,7 +2,7 @@ import { NavBar } from '@/components/nav-bar';
 import { ThemeProvider } from '@/components/providers';
 import type { Metadata, Viewport } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
-import React from 'react';
+import { ReactNode } from 'react';
 import './globals.scss';
 
 const roboto = Roboto_Condensed({
@@ -51,7 +51,7 @@ export const viewport: Viewport = {
 };
 
 type RootLayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
