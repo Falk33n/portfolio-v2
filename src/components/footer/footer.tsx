@@ -7,12 +7,12 @@ export const Footer = () => {
       <div className='flex justify-between items-center sm:mx-auto sm:w-[90%] md:w-[80%] lg:w-[65%]'>
         <div className='flex flex-col justify-center items-center gap-y-1'>
           <Logo placement='footer' />
-          <p className='font-light text-center text-muted-foreground text-sm'>
+          <p className='font-light text-center text-muted-foreground text-sm animate-fade-in'>
             Created by Tim Falk
           </p>
         </div>
         <NavigationMenu aria-label='Footer navigation.'>
-          <NavigationMenuList className='flex md:flex-row flex-col justify-center items-center md:gap-x-1'>
+          <NavigationMenuList className='flex md:flex-row flex-col justify-center items-center md:gap-x-1 animate-fade-in'>
             <PageLinks placement='footer' />
             <SocialMediaLinks placement='footer' />
           </NavigationMenuList>

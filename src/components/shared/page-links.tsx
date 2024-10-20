@@ -11,8 +11,8 @@ export const PageLinks = ({ placement }: SharedPlacement) => {
           asChild
           variant='ghost'
           className={cn(
-            'text-base',
-            placement === 'footer' && 'hover:bg-background text-sm'
+            'text-sm md:text-base',
+            placement === 'footer' && 'hover:bg-background'
           )}
         >
           <Link
@@ -29,7 +29,7 @@ export const PageLinks = ({ placement }: SharedPlacement) => {
           asChild
           variant='ghost'
           className={cn(
-            'text-base',
+            'text-sm md:text-base',
             placement === 'footer' && 'hover:bg-background text-sm'
           )}
         >
@@ -46,7 +46,7 @@ export const PageLinks = ({ placement }: SharedPlacement) => {
           asChild
           variant='ghost'
           className={cn(
-            'text-base',
+            'text-sm md:text-base',
             placement === 'footer' && 'hover:bg-background text-sm'
           )}
         >

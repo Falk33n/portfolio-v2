@@ -30,7 +30,7 @@ export const Logo = ({ placement }: SharedPlacement) => {
                 asChild
                 variant='ghost'
                 className={cn(
-                  'flex items-center gap-0 font-medium uppercase',
+                  'flex items-center gap-0 font-medium uppercase animate-fade-in',
                   josefinSans.className,
                   placement === 'footer' && 'hover:bg-background'
                 )}

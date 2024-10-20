@@ -56,7 +56,7 @@ export const ThemeToggle = () => {
               >
                 <span
                   aria-hidden
-                  className='md:hidden'
+                  className='md:hidden text-sm'
                 >
                   Theme
                 </span>
