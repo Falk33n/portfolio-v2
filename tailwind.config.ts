@@ -70,11 +70,16 @@ const config: Config = {
           from: { transform: 'translateX(200px)' },
           to: { transform: 'translateX(0)' },
         },
+        'fade-in': {
+          from: { transform: 'scale(0)', opacity: '0' },
+          to: { transform: 'scale(1)', opacity: '1' },
+        },
       },
       animation: {
         'spin-out': 'spin-out 1s linear forwards',
         'spin-in': 'spin-in 1s linear forwards',
         'slide-in': 'slide-in 0.2s linear forwards',
+        'fade-in': 'fade-in 0.3s linear forwards',
       },
     },
   },
