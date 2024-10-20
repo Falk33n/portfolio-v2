@@ -1,6 +1,6 @@
 'use client';
 
-import { NavBarLinks } from '@/components/nav-bar';
+import { NavbarLinks } from '@/components/navbar';
 import {
   Button,
   Skeleton,
@@ -14,7 +14,7 @@ import { cn } from '@/lib';
 import { Menu, X } from 'lucide-react';
 import React from 'react';
 
-export const NavBarMenu = () => {
+export const NavbarMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { width } = useWindowSize();
 
@@ -59,9 +59,9 @@ export const NavBarMenu = () => {
           </Tooltip>
         </TooltipProvider>
       )}
-      {(isMenuOpen || width >= 768) && <NavBarLinks />}
+      {(isMenuOpen || width >= 768) && <NavbarLinks />}
     </>
   );
 };
 
-NavBarMenu.displayName = 'NavBarMenu';
+NavbarMenu.displayName = 'NavbarMenu';
