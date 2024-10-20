@@ -1,4 +1,5 @@
-import { NavBar } from '@/components/nav-bar';
+import { Footer } from '@/components/footer';
+import { Navbar } from '@/components/navbar';
 import { ThemeProvider } from '@/components/providers';
 import type { Metadata, Viewport } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
@@ -101,13 +102,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <NavBar />
+          <Navbar />
           <main
             id='content'
             aria-label='Main content'
           >
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
